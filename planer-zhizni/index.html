@@ -164,7 +164,6 @@
 </head>
 <body>
 <div class="app">
-  <aside class="rail"><div class="logo">__ICON_sparkles__</div><nav class="nav" id="nav"></nav></aside>
   <main class="main"><div class="page" id="view"></div></main>
 </div>
 <script>
@@ -337,7 +336,7 @@ const views={
     const recent=[];state.collection.cats.forEach(c=>(state.collection.items[c.id]||[]).forEach(it=>recent.push({it,cat:c})));
     const bestS=Math.max(0,...state.challenges.map(chStreak));
     return `
-    <div class="top"><div><h1>Доброе утро</h1><div class="sub">${fmtDate}</div></div><button class="btn" data-action="add-task">${I('plus')}Быстро добавить</button></div>
+    <div class="top"><div><h1>Приветствую, Даниил!</h1><div class="sub">${fmtDate}</div></div><button class="btn" data-action="add-task">${I('plus')}Быстро добавить</button></div>
     <div class="grid g3" style="margin-bottom:16px">
       <div class="card stat clickable" data-go="tasks"><div class="label">${I('checklist')}Задачи сегодня</div>
         <div style="display:flex;align-items:center;gap:14px;margin-top:10px">${ring(donePct,64,'var(--green)',`<div class="num" style="font-weight:700;font-size:14px">${doneN}/${total}</div>`)}
